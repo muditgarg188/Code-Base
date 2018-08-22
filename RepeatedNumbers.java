@@ -3,7 +3,7 @@ package testPackage;
 import java.util.Map;
 import java.util.TreeMap;
 
-//Printing repeated numbers in 
+//Printing repeated numbers in an array in sorted manner
 public class RepeatedNumbers {
 	
 	public static void main(String[] args) {
