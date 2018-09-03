@@ -1,0 +1,40 @@
+//Given an even number ( greater than 2 ), return two prime numbers whose sum will be equal to given number.
+public class Solution {
+    public int[] primesum(int A) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int[] res = new int[2];
+        int num = 2;
+        while(num <= A) {
+            boolean flag = true;
+            for(int i = 2; i <= Math.sqrt(num); i++) {
+                if(num%i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag) {
+                boolean stat = checkPrime(A-num);
+                if(stat) {
+                    res[0] = num;
+                    res[1] = A-num;
+                    break;
+                }
+            }
+            num++;
+        }
+        return res;
+    }
+    public boolean checkPrime(int num) {
+        boolean flag = true;
+        for(int i = 2; i <= Math.sqrt(num); i++) {
+            if(num%i == 0) {
+                flag = false;
+                break;
+            }
+        }
+        if(flag) {
+            return flag;
+        }
+        return false;
+    }
+}
