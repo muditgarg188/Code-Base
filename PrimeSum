@@ -2,7 +2,6 @@
 //If there are more than one solutions possible, return the lexicographically smaller solution.
 public class Solution {
     public int[] primesum(int A) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
         int[] res = new int[2];
         int num = 2;
         while(num <= A) {
