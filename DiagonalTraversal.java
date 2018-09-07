@@ -18,7 +18,7 @@ public class DiagonalTraversal {
 		for(int x = N-1; x >=0; x--) {	//running loop N times to make N slices out of 2N-1 slices
 			while(j <= N-1) {
 				sum += arr[i][j];
-				i++;
+				i++;	//Each time incrementing i and j to get next element of diagonal
 				j++;
 			}
 			z--;
@@ -30,7 +30,7 @@ public class DiagonalTraversal {
 		for(int x = N-2; x >=0; x--) { // running loop to make remaining slices
 			while(i <= N-1) {
 				sum += arr[i][j];
-				i++;
+				i++;	//Each time incrementing i and j to get next element of diagonal
 				j++;
 			}
 			z++;
